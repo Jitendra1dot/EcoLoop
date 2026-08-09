@@ -1,0 +1,60 @@
+.home-container {
+  width: 100%;
+}
+
+.hero-section {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #f1f8f4;
+}
+
+.hero-section h1 {
+  font-size: 48px;
+  color: #2e7d32;
+  margin-bottom: 20px;
+}
+
+.hero-section p {
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.hero-buttons a {
+  display: inline-block;
+  padding: 12px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 6px;
+  background-color: #2e7d32;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.how-section,
+.why-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.steps,
+.benefits {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.steps div,
+.benefits div {
+  width: 250px;
+  padding: 25px;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+.home-logo {
+  width: 220px;
+  height: auto;
+  margin-bottom: 20px;
+}
