@@ -1,0 +1,1364 @@
+/* =========================================
+   MARKETPLACE MAIN
+========================================= */
+
+.marketplace-container {
+  position: relative;
+
+  min-height: calc(100vh - 70px);
+
+  width: 100%;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f5fbf6 0%,
+      #eef8f0 50%,
+      #f8fcf8 100%
+    );
+}
+
+
+/* =========================================
+   COMMON PANEL
+========================================= */
+
+.marketplace-panel {
+  width: 100%;
+
+  min-height: calc(100vh - 70px);
+
+  box-sizing: border-box;
+
+  transition:
+    transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+
+}
+
+
+/* =========================================
+   STORE PANEL
+========================================= */
+
+.store-panel {
+  position: relative;
+
+  transform: translateX(0);
+
+  z-index: 2;
+}
+
+.store-panel.slide-left {
+  transform: translateX(-100%);
+}
+
+
+/* =========================================
+   CUSTOMIZATION PANEL
+========================================= */
+
+.customization-panel {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  padding: 35px 7% 60px;
+
+  box-sizing: border-box;
+
+  transform: translateX(100%);
+
+  z-index: 3;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f5fbf6,
+      #eef8f0
+    );
+}
+
+.customization-panel.slide-in {
+  transform: translateX(0);
+}
+
+
+/* =========================================
+   MARKETPLACE HEADER
+========================================= */
+
+.marketplace-header {
+  text-align: center;
+
+  padding:
+    55px
+    7%
+    25px;
+}
+
+.marketplace-header h1 {
+  margin: 0 0 12px;
+
+  color: #1f6b2a;
+
+  font-size: 38px;
+
+  font-weight: 700;
+
+  letter-spacing: -0.5px;
+}
+
+.marketplace-header p {
+  margin: 0 auto;
+
+  max-width: 650px;
+
+  color: #68736a;
+
+  font-size: 16px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   TABS
+========================================= */
+
+.marketplace-tabs {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  margin:
+    10px
+    auto
+    35px;
+
+  padding: 5px;
+
+  width: fit-content;
+
+  background: #e3f1e5;
+
+  border-radius: 12px;
+}
+
+.marketplace-tabs button {
+  border: none;
+
+  padding:
+    11px
+    25px;
+
+  border-radius: 8px;
+
+  background: transparent;
+
+  color: #47704d;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.marketplace-tabs button:hover {
+  color: #245e2d;
+
+  background: #d7ead9;
+}
+
+.marketplace-tabs button.active {
+  background: #2e7d32;
+
+  color: white;
+
+  box-shadow:
+    0 3px 8px rgba(46, 125, 50, 0.2);
+}
+
+
+/* =========================================
+   PRODUCT GRID
+========================================= */
+
+.product-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(260px, 1fr)
+    );
+
+  gap: 25px;
+
+  padding:
+    10px
+    7%
+    60px;
+}
+
+
+/* =========================================
+   PRODUCT CARD
+========================================= */
+
+.product-card {
+  display: flex;
+
+  flex-direction: column;
+
+  overflow: hidden;
+
+  background: white;
+
+  border:
+    1px solid
+    #e1ebe3;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 6px 20px
+    rgba(39, 86, 46, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 12px 28px
+    rgba(39, 86, 46, 0.14);
+}
+
+
+/* =========================================
+   PRODUCT IMAGE
+========================================= */
+
+.product-image {
+  height: 205px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e5f4e7,
+      #f3faf4
+    );
+
+  border-bottom:
+    1px solid
+    #e5eee6;
+
+  font-size: 85px;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.02);
+}
+
+
+/* =========================================
+   PRODUCT CONTENT
+========================================= */
+
+.product-content {
+  display: flex;
+
+  flex-direction: column;
+
+  flex: 1;
+
+  padding: 22px;
+}
+
+.product-category {
+  display: inline-block;
+
+  width: fit-content;
+
+  margin-bottom: 8px;
+
+  padding:
+    5px
+    10px;
+
+  background: #e8f5e9;
+
+  border-radius: 20px;
+
+  color: #2e7d32;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.4px;
+}
+
+.product-content h2 {
+  margin:
+    5px
+    0
+    5px;
+
+  color: #243529;
+
+  font-size: 20px;
+
+  line-height: 1.3;
+}
+
+.product-content p {
+  margin:
+    5px
+    0;
+
+  color: #68736a;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+.product-content .manufacturer-name {
+  margin-bottom: 8px;
+
+  color: #4d8153;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   PRODUCT BOTTOM
+========================================= */
+
+.product-bottom {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 12px;
+
+  margin-top: auto;
+
+  padding-top: 20px;
+}
+
+.product-bottom > strong {
+  color: #1f6b2a;
+
+  font-size: 22px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   PRODUCT BUTTONS
+========================================= */
+
+.product-buttons {
+  display: flex;
+
+  gap: 8px;
+}
+
+.product-buttons button {
+  padding:
+    9px
+    13px;
+
+  border-radius: 7px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    all 0.2s ease;
+}
+
+
+/* BUY */
+
+.buy-button {
+  border:
+    1px solid
+    #2e7d32;
+
+  background: white;
+
+  color: #2e7d32;
+}
+
+.buy-button:hover {
+  background: #e8f5e9;
+}
+
+
+/* CUSTOMIZE */
+
+.customize-button {
+  border: none;
+
+  background: #2e7d32;
+
+  color: white;
+
+  box-shadow:
+    0 3px 7px
+    rgba(46, 125, 50, 0.18);
+}
+
+.customize-button:hover {
+  background: #256628;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   BACK TO STORE
+========================================= */
+
+.back-store-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding:
+    10px
+    18px;
+
+  border:
+    1px solid
+    #2e7d32;
+
+  border-radius: 8px;
+
+  background: white;
+
+  color: #2e7d32;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    all 0.25s ease;
+}
+
+.back-store-button:hover {
+  background: #2e7d32;
+
+  color: white;
+
+  transform: translateX(-3px);
+}
+
+
+/* =========================================
+   CUSTOMIZATION HEADER
+========================================= */
+
+.customization-header {
+  text-align: center;
+
+  padding:
+    20px
+    0
+    35px;
+}
+
+.customization-header h1 {
+  margin:
+    0
+    0
+    10px;
+
+  color: #1f6b2a;
+
+  font-size: 34px;
+}
+
+.customization-header p {
+  margin: 0;
+
+  color: #68736a;
+
+  font-size: 15px;
+}
+
+.customization-header strong {
+  color: #2e7d32;
+}
+
+
+/* =========================================
+   CUSTOMIZATION CHOICE
+========================================= */
+
+.customization-choice {
+  max-width: 850px;
+
+  margin:
+    20px
+    auto;
+
+  padding: 35px;
+
+  background: white;
+
+  border:
+    1px solid
+    #e0ebe2;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 8px 25px
+    rgba(39, 86, 46, 0.08);
+
+  text-align: center;
+}
+
+.customization-choice h2 {
+  margin:
+    0
+    0
+    28px;
+
+  color: #263a2a;
+
+  font-size: 23px;
+}
+
+
+/* =========================================
+   CUSTOMIZATION CHOICE GRID
+========================================= */
+
+.customization-choice-grid {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1fr;
+
+  gap: 20px;
+}
+
+.customization-choice-grid button {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 10px;
+
+  min-height: 190px;
+
+  padding: 28px 22px;
+
+  border:
+    1px solid
+    #dce9de;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fbfefb,
+      #f3f9f4
+    );
+
+  color: #263a2a;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.customization-choice-grid button:hover {
+  transform: translateY(-5px);
+
+  border-color: #6da874;
+
+  box-shadow:
+    0 8px 20px
+    rgba(46, 125, 50, 0.12);
+}
+
+.customization-choice-grid span {
+  font-size: 45px;
+}
+
+.customization-choice-grid strong {
+  font-size: 18px;
+
+  color: #2e7d32;
+}
+
+.customization-choice-grid small {
+  max-width: 260px;
+
+  color: #707a72;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   DESIGN SECTION
+========================================= */
+
+.design-section {
+  max-width: 1100px;
+
+  margin:
+    0
+    auto;
+
+  padding-bottom: 50px;
+}
+
+.design-section > h2 {
+  margin-bottom: 7px;
+
+  color: #263a2a;
+
+  font-size: 25px;
+}
+
+.section-description {
+  margin:
+    0
+    0
+    25px;
+
+  color: #68736a;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   DESIGN GRID
+========================================= */
+
+.design-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(220px, 1fr)
+    );
+
+  gap: 20px;
+}
+
+
+/* =========================================
+   DESIGN CARD
+========================================= */
+
+.design-card {
+  overflow: hidden;
+
+  background: white;
+
+  border:
+    2px solid
+    transparent;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 5px 18px
+    rgba(39, 86, 46, 0.08);
+
+  transition:
+    all 0.25s ease;
+}
+
+.design-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 10px 25px
+    rgba(39, 86, 46, 0.12);
+}
+
+.design-card.selected {
+  border-color: #2e7d32;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(46, 125, 50, 0.12);
+}
+
+
+/* =========================================
+   DESIGN IMAGE
+========================================= */
+
+.design-image {
+  height: 160px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e8f5e9,
+      #f7fbf7
+    );
+
+  font-size: 70px;
+}
+
+
+/* =========================================
+   DESIGN INFO
+========================================= */
+
+.design-info {
+  padding: 18px;
+}
+
+.design-info > span {
+  color: #4e8455;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+.design-info h3 {
+  margin:
+    7px
+    0;
+
+  color: #293b2d;
+
+  font-size: 18px;
+}
+
+.design-info p {
+  margin:
+    8px
+    0;
+
+  color: #6b756d;
+
+  font-size: 13px;
+}
+
+.design-info p strong {
+  color: #2e7d32;
+}
+
+.design-price {
+  display: block;
+
+  margin:
+    12px
+    0;
+
+  color: #1f6b2a;
+
+  font-size: 20px;
+}
+
+
+/* DESIGN SELECT BUTTON */
+
+.design-info button {
+  width: 100%;
+
+  padding:
+    10px;
+
+  border:
+    1px solid
+    #2e7d32;
+
+  border-radius: 7px;
+
+  background: white;
+
+  color: #2e7d32;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.design-info button:hover {
+  background: #e8f5e9;
+}
+
+.design-card.selected .design-info button {
+  background: #2e7d32;
+
+  color: white;
+}
+
+
+/* =========================================
+   MATERIAL SECTION
+========================================= */
+
+.material-section {
+  margin-top: 30px;
+
+  padding: 28px;
+
+  background: white;
+
+  border:
+    1px solid
+    #dce9de;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 5px 18px
+    rgba(39, 86, 46, 0.06);
+}
+
+.material-section h2 {
+  margin:
+    0
+    0
+    8px;
+
+  color: #263a2a;
+
+  font-size: 22px;
+}
+
+.material-section > p {
+  margin:
+    0
+    0
+    20px;
+
+  color: #68736a;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+.material-section > p strong {
+  color: #2e7d32;
+}
+
+
+/* =========================================
+   MATERIAL OPTIONS
+========================================= */
+
+.material-options {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      1fr
+    );
+
+  gap: 15px;
+}
+
+.material-options button {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 7px;
+
+  padding: 20px;
+
+  border:
+    1px solid
+    #dce9de;
+
+  border-radius: 12px;
+
+  background: #f9fcf9;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    all 0.25s ease;
+}
+
+.material-options button:hover {
+  border-color: #6da874;
+
+  background: #f0f8f1;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 6px 15px
+    rgba(46, 125, 50, 0.08);
+}
+
+.material-options button span {
+  font-size: 27px;
+}
+
+.material-options button strong {
+  color: #2e7d32;
+
+  font-size: 15px;
+}
+
+.material-options button small {
+  color: #707a72;
+
+  font-size: 12px;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================
+   UPLOAD DESIGN SECTION
+========================================= */
+
+.upload-design-section {
+  max-width: 850px;
+
+  margin:
+    0
+    auto;
+
+  padding-bottom: 50px;
+}
+
+.upload-design-section > h2 {
+  color: #263a2a;
+
+  font-size: 25px;
+
+  margin-bottom: 7px;
+}
+
+
+/* =========================================
+   UPLOAD BOX
+========================================= */
+
+.upload-box {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 230px;
+
+  margin:
+    25px
+    0;
+
+  padding: 25px;
+
+  border:
+    2px dashed
+    #8ab58f;
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f7fcf7,
+      #edf7ef
+    );
+
+  text-align: center;
+
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.upload-box:hover {
+  border-color: #2e7d32;
+
+  background: #eaf6ec;
+}
+
+.upload-icon {
+  margin-bottom: 10px;
+
+  font-size: 45px;
+}
+
+.upload-box h3 {
+  margin:
+    5px
+    0;
+
+  color: #2e7d32;
+}
+
+.upload-box p {
+  margin:
+    5px
+    0
+    15px;
+
+  color: #788279;
+
+  font-size: 13px;
+}
+
+.upload-box input[type="file"] {
+  max-width: 100%;
+
+  padding: 8px;
+
+  border-radius: 6px;
+
+  background: white;
+
+  font-size: 13px;
+}
+
+.uploaded-file {
+  margin-top: 15px !important;
+
+  color: #2e7d32 !important;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   DESIGN DESCRIPTION
+========================================= */
+
+.upload-design-section > label {
+  display: block;
+
+  margin:
+    20px
+    0
+    8px;
+
+  color: #37443a;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+.upload-design-section > textarea {
+  width: 100%;
+
+  min-height: 130px;
+
+  box-sizing: border-box;
+
+  padding: 13px;
+
+  resize: vertical;
+
+  border:
+    1px solid
+    #ccd9ce;
+
+  border-radius: 9px;
+
+  background: white;
+
+  color: #333;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.upload-design-section > textarea:focus {
+  border-color: #2e7d32;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(46, 125, 50, 0.08);
+}
+
+
+/* =========================================
+   SUBMIT DESIGN
+========================================= */
+
+.submit-design-button {
+  width: 100%;
+
+  margin-top: 25px;
+
+  padding: 14px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2e7d32,
+      #3f9145
+    );
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 12px
+    rgba(46, 125, 50, 0.2);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.submit-design-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 18px
+    rgba(46, 125, 50, 0.25);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .product-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(220px, 1fr)
+      );
+
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .marketplace-header {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .customization-panel {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .material-options {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .marketplace-header {
+    padding:
+      35px
+      5%
+      20px;
+  }
+
+  .marketplace-header h1 {
+    font-size: 29px;
+  }
+
+  .marketplace-header p {
+    font-size: 14px;
+  }
+
+
+  .marketplace-tabs {
+    margin-bottom: 25px;
+  }
+
+  .marketplace-tabs button {
+    padding:
+      10px
+      17px;
+
+    font-size: 13px;
+  }
+
+
+  .product-grid {
+    grid-template-columns: 1fr;
+
+    padding:
+      5px
+      5%
+      40px;
+  }
+
+
+  .product-image {
+    height: 180px;
+
+    font-size: 75px;
+  }
+
+
+  .product-bottom {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .product-buttons {
+    width: 100%;
+  }
+
+  .product-buttons button {
+    flex: 1;
+  }
+
+
+  .customization-panel {
+    padding:
+      25px
+      5%
+      40px;
+  }
+
+
+  .customization-header h1 {
+    font-size: 27px;
+  }
+
+
+  .customization-choice {
+    padding: 25px 18px;
+  }
+
+  .customization-choice h2 {
+    font-size: 20px;
+  }
+
+
+  .customization-choice-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .customization-choice-grid button {
+    min-height: 160px;
+  }
+
+
+  .design-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .material-section {
+    padding: 20px;
+  }
+
+
+  .upload-box {
+    min-height: 190px;
+
+    padding: 18px;
+  }
+
+
+  .back-store-button {
+    font-size: 13px;
+  }
+
+}

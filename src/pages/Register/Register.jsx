@@ -68,7 +68,7 @@ function Register() {
     <div className="register-container">
       <div className="register-card">
       <img
-      src="/ecoloop-logo.png"
+      src="/EcoLoop/ecoloop-logo.png"
       alt="EcoLoop Logo"
       className="auth-logo"
       />

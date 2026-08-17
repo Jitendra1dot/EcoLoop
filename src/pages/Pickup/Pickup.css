@@ -191,3 +191,233 @@
 .edit-button:hover {
   background-color: #e8f5e9;
 }
+.plastic-source-options {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.source-button {
+  flex: 1;
+  padding: 12px;
+
+  border: 1px solid #2e7d32;
+  border-radius: 6px;
+
+  background-color: white;
+  color: #2e7d32;
+
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.source-button.active {
+  background-color: #2e7d32;
+  color: white;
+}
+
+.source-button:hover {
+  background-color: #e8f5e9;
+}
+
+.source-button.active:hover {
+  background-color: #256628;
+}
+
+.available-plastic {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 8px 0 15px;
+  padding: 12px 15px;
+
+  background-color: #e8f5e9;
+  border-radius: 6px;
+
+  color: #2e7d32;
+}
+
+.available-plastic strong {
+  font-size: 18px;
+}
+
+.quantity-help {
+  color: #666;
+  margin-top: -5px;
+  margin-bottom: 10px;
+}
+/* ==============================
+   PICKUP SOURCE OPTIONS
+   ============================== */
+
+.pickup-source-options {
+  display: flex;
+  gap: 15px;
+  margin: 10px 0 25px;
+}
+
+.pickup-source-button {
+  flex: 1;
+
+  padding: 18px 12px;
+
+  border: 1px solid #2e7d32;
+  border-radius: 10px;
+
+  background-color: white;
+  color: #2e7d32;
+
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+
+  transition: 0.3s;
+}
+
+.pickup-source-button span {
+  font-size: 28px;
+}
+
+.pickup-source-button strong {
+  font-size: 16px;
+}
+
+.pickup-source-button small {
+  color: #666;
+  font-size: 12px;
+}
+
+.pickup-source-button:hover {
+  background-color: #e8f5e9;
+}
+
+/* Selected option */
+
+.pickup-source-button.active {
+  background-color: #2e7d32;
+  color: white;
+}
+
+.pickup-source-button.active small {
+  color: white;
+}
+
+
+/* ==============================
+   ECO VAULT / MANUAL SECTIONS
+   ============================== */
+
+.pickup-section {
+  margin-top: 20px;
+  padding: 20px;
+
+  background-color: #f4faf6;
+
+  border: 1px solid #d7ead9;
+  border-radius: 10px;
+}
+
+.pickup-section h3 {
+  margin-top: 0;
+  margin-bottom: 18px;
+
+  color: #2e7d32;
+}
+
+
+/* Available EcoVault plastic */
+
+.available-plastic {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 10px;
+  padding: 12px 15px;
+
+  background-color: #e8f5e9;
+
+  border-radius: 7px;
+
+  color: #2e7d32;
+}
+
+.available-plastic strong {
+  font-size: 18px;
+}
+
+
+/* Quantity help */
+
+.quantity-help {
+  display: block;
+
+  margin-top: 6px;
+
+  color: #666;
+
+  font-size: 12px;
+}
+
+
+/* ==============================
+   TOTAL PICKUP
+   ============================== */
+
+.pickup-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 20px 0;
+  padding: 18px 20px;
+
+  background-color: #e8f5e9;
+
+  border-radius: 10px;
+
+  border: 1px solid #c8e6c9;
+}
+
+.pickup-total div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.pickup-total span {
+  color: #555;
+  font-size: 14px;
+}
+
+.pickup-total strong {
+  color: #2e7d32;
+  font-size: 22px;
+}
+
+
+/* ==============================
+   MOBILE
+   ============================== */
+
+@media (max-width: 700px) {
+
+  .pickup-source-options {
+    flex-direction: column;
+  }
+
+  .pickup-source-button {
+    width: 100%;
+  }
+
+  .pickup-total {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+}

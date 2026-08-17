@@ -27,6 +27,7 @@ function Navbar() {
         <Link to="/marketplace">Marketplace</Link>
         <Link to="/dashboard">Dashboard</Link>
         <Link to="/profile">Profile</Link>
+        <Link to="/ecovault">My EcoVault</Link>
       </div>
 
       {/* Login / Register / Logout */}

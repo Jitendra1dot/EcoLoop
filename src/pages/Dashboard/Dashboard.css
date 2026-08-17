@@ -1,0 +1,276 @@
+.dashboard-container {
+  min-height: calc(100vh - 70px);
+  padding: 45px 7%;
+  background-color: #f4faf6;
+}
+
+
+/* HEADER */
+
+.dashboard-header {
+  margin-bottom: 35px;
+}
+
+.dashboard-header h1 {
+  margin-bottom: 8px;
+  color: #2e7d32;
+}
+
+.dashboard-header p {
+  color: #666;
+}
+
+
+/* STATS */
+
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.dashboard-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  padding: 22px;
+
+  background-color: white;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.07);
+}
+
+.stat-icon {
+  font-size: 35px;
+}
+
+.dashboard-stat-card p {
+  margin: 0 0 5px;
+
+  color: #666;
+
+  font-size: 14px;
+}
+
+.dashboard-stat-card h2 {
+  margin: 0;
+
+  color: #2e7d32;
+}
+
+
+/* RECENT PICKUPS */
+
+.recent-pickups {
+  margin-bottom: 40px;
+}
+
+.section-heading {
+  margin-bottom: 20px;
+}
+
+.section-heading h2 {
+  color: #2e7d32;
+}
+
+
+/* PICKUP LIST */
+
+.pickup-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dashboard-pickup-card {
+  display: grid;
+
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 18px 20px;
+
+  background-color: white;
+
+  border-radius: 10px;
+
+  box-shadow:
+    0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+.pickup-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pickup-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #e8f5e9;
+
+  border-radius: 50%;
+
+  font-size: 20px;
+}
+
+.pickup-info h3 {
+  margin: 0 0 4px;
+}
+
+.pickup-info p {
+  margin: 0;
+
+  color: #666;
+}
+
+.pickup-date {
+  color: #666;
+  font-size: 14px;
+}
+
+.pickup-amount strong {
+  color: #2e7d32;
+  font-size: 18px;
+}
+
+
+/* STATUS */
+
+.pickup-status {
+  justify-self: start;
+
+  padding: 7px 12px;
+
+  border-radius: 20px;
+
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.pickup-status.waiting {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.pickup-status.completed {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+
+/* EMPTY */
+
+.no-pickups {
+  padding: 50px;
+
+  text-align: center;
+
+  background-color: white;
+
+  border-radius: 12px;
+}
+
+.no-pickups span {
+  font-size: 45px;
+}
+
+.no-pickups h3 {
+  color: #2e7d32;
+}
+
+.no-pickups p {
+  color: #666;
+}
+
+
+/* QUICK ACTIONS */
+
+.quick-actions {
+  margin-bottom: 30px;
+}
+
+.quick-actions h2 {
+  margin-bottom: 20px;
+
+  color: #2e7d32;
+}
+
+.quick-action-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.quick-action-buttons button {
+  flex: 1;
+
+  padding: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  border: 1px solid #2e7d32;
+  border-radius: 8px;
+
+  background-color: white;
+  color: #2e7d32;
+
+  font-size: 15px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.quick-action-buttons button:hover {
+  background-color: #e8f5e9;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 1000px) {
+
+  .dashboard-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard-pickup-card {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .dashboard-container {
+    padding: 30px 5%;
+  }
+
+  .dashboard-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-pickup-card {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-action-buttons {
+    flex-direction: column;
+  }
+
+}

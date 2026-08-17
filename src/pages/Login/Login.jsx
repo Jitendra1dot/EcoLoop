@@ -43,7 +43,7 @@ function Login() {
       <div className="login-card">
 
         <img
-        src="/ecoloop-logo.png"
+        src="/EcoLoop/ecoloop-logo.png"
         alt="EcoLoop Logo"
         className="auth-logo"
         />

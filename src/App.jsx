@@ -10,6 +10,7 @@ import Marketplace from "./pages/Marketplace/Marketplace";
 import Pickup from "./pages/Pickup/Pickup";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Profile from "./pages/Profile/Profile";
+import EcoVault from "./pages/EcoVault/EcoVault";
 
 function App() {
   return (
@@ -47,6 +48,16 @@ function App() {
             </ProtectedRoute>
           }
         />
+
+        {/* Protected EcoVault */}
+        <Route
+          path="/ecovault"
+          element={
+            <ProtectedRoute>
+              <EcoVault />
+            </ProtectedRoute>
+          }
+        />  
 
 
         {/* Protected Dashboard */}
